@@ -1,0 +1,35 @@
+pivotal:
+   image: sectalks_binary
+   ports:
+      - 7995:8000
+   volumes:
+      - /home/glenn/0x21/pivotal:/home
+   command: socat TCP-LISTEN:8000,reuseaddr,fork EXEC:"/home/pivotal"
+yummy_rop_swap:
+   image: sectalks_binary
+   ports:
+      - 7996:8000
+   volumes:
+      - /home/glenn/0x21/yummy_rop_swap:/home
+   command: socat TCP-LISTEN:8000,reuseaddr,fork EXEC:"/home/yummy_rop_swap"
+salt:
+   image: sectalks_binary
+   ports:
+      - 7997:8000
+   volumes:
+      - /home/glenn/0x21/salt:/home
+   command: socat TCP-LISTEN:8000,reuseaddr,fork EXEC:"/home/salt"
+rop_easy:
+   image: sectalks_binary
+   ports:
+      - 7998:8000
+   volumes:
+      - /home/glenn/0x21/rop_easy:/home
+   command: socat TCP-LISTEN:8000,reuseaddr,fork EXEC:"/home/rop_easy"
+r0pbaby:
+   image: sectalks_binary
+   ports:
+      - 7999:8000
+   volumes:
+      - /home/glenn/0x21/r0pbaby:/home
+   command: socat TCP-LISTEN:8000,reuseaddr,fork EXEC:"/home/r0pbaby"
